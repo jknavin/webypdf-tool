@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>WebyPDF – Free All-in-One PDF Tools</title>
+  <meta name="description" content="WebyPDF: merge, split, compress, sign, rotate, watermark and convert PDFs right in your browser. Private by design — your files never leave your device. Installable and works offline.">
+  <meta name="theme-color" content="#150d3a">
+  <meta name="color-scheme" content="dark light">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="WebyPDF">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WebyPDF – Free All-in-One PDF Tools">
+  <meta property="og:description" content="Merge, split, compress, sign and convert PDFs privately in your browser. No uploads. Works offline.">
+  <meta property="og:image" content="icons/icon-512.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme-init.js"></script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i></div>
+
+  <header class="topbar">
+    <div class="topbar-in glass">
+      <a class="brand" href="#/" aria-label="WebyPDF home">
+        <img src="icons/icon.svg" alt="" width="34" height="34">
+        <span>Weby<b>PDF</b></span>
+      </a>
+      <span class="spacer"></span>
+      <button id="installBtn" class="btn primary sm" type="button" hidden>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>
+        <span>Install app</span>
+      </button>
+      <button id="themeBtn" class="btn icon" type="button" aria-label="Switch theme"></button>
+    </div>
+  </header>
+
+  <main id="app" class="wrap" aria-live="polite">
+    <noscript><p class="glass" style="padding:20px">WebyPDF needs JavaScript to work with your PDFs locally in the browser.</p></noscript>
+  </main>
+
+  <footer class="wrap foot">
+    <p><b>WebyPDF</b> · Everything is processed on your device. Your files are never uploaded.</p>
+  </footer>
+
+  <dialog id="installDlg" class="glass dlg">
+    <h3>Install WebyPDF</h3>
+    <p><b>iPhone / iPad (Safari):</b> tap the <b>Share</b> button, then <b>Add to Home Screen</b>.</p>
+    <p><b>Android / Chrome / Edge:</b> open the browser menu and choose <b>Install app</b> (or <b>Add to Home screen</b>).</p>
+    <p><b>Desktop:</b> click the install icon in the address bar.</p>
+    <button class="btn primary" type="button" data-close>Got it</button>
+  </dialog>
+
+  <div id="toasts" aria-live="polite"></div>
+
+  <script src="vendor/pdf-lib.min.js" defer></script>
+  <script src="vendor/jszip.min.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
